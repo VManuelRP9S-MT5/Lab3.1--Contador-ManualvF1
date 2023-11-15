@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contador_ManuelvF1.MainPage">
+
+    <VerticalStackLayout Padding="16" Spacing="16" BackgroundColor="Beige">
+        <Label Text="Conteo:"
+               FontSize="Small"/>
+        <Border Margin="8">
+            <VerticalStackLayout Padding="32">
+                <Label Text="123"  FontSize="Large" HorizontalTextAlignment="Center" FontAttributes="Bold"
+                       x:Name="ConteoLabel"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <HorizontalStackLayout Margin="16" HorizontalOptions="Center" Spacing="16">
+            <Button Text="contar" WidthRequest="100" FontSize="Small"
+                    Clicked="OnContarButtonClicked"/>
+            <Button Text="Reiniciar" WidthRequest="100" FontSize="Small"
+                    Clicked="OnReiniciarButtonClicked"/>
+        </HorizontalStackLayout>
+        <Slider x:Name="PasoSlider" Minimum="1" Maximum="10" ValueChanged="OnPasoSliderValueChanged"/>
+    </VerticalStackLayout>
+</ContentPage>
